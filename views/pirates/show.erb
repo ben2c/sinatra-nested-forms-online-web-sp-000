@@ -5,19 +5,19 @@
   <title>Ship and Pirate Information</title>
 </head>
 
-<div class='pirate'>
-  <h2>Name: <%= @pirate.name %></h2>
-  <h3>Weight: <%= @pirate.weight %> </h3>
-  <h3>Height: <%= @pirate.height %> </h3>
+<div class="pirate">
+  <h3>Name: <%= @pirate.name %></h3><br>
+  <h4>Weight: <%= @pirate.weight %> pounds</h4><br>
+  <h4>Height: <%= @pirate.height %> inches</h4>
+</div><br>
 
-</div>
-
-<div class='ships'>
-  <% @ships.each do |ship| %>
-  <h2>Name: <%= @ship.name %> </h2>
-  <h3>Type: <%= @ship.type %> </h3>
-  <h3>Booty: <%= @ship.booty %> </h3>
-  <% end %>
-</div>
+<h1>Ships</h1>
+<% @ships.each do |ship| %>
+  <div class="ship">
+    <p>Name: <%= ship.name %></p><br>
+    <p>Type: <%= ship.type %></p><br>
+    <p>Booty: <%= ship.booty %></p>
+  </div><br>
+<% end %>
 
 </html>
